@@ -24,6 +24,8 @@ import CourseFormPage from '../pages/CourseFormPage'
 import CourseDetailPage from '../pages/CourseDetailPage'
 import MyApplicationsPage from '../pages/MyApplicationsPage'
 import UserProfilePage from '../pages/UserProfilePage'
+import ErrorBoundary from '../pages/ErrorBoundary'
+import RegisterStep2 from '../pages/RegisterStep2'
 
 export function PrivateRoute({ children }: { children: JSX.Element }) {
   const { user, loading } = useAuth()
@@ -42,7 +44,7 @@ export default function AppRoutes() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-
+          <Route path="/register-step2" element={<RegisterStep2 />} />
           {/* Bolsa de trabajo pública */}
           <Route path="/jobs" element={<JobBoardPage />} />
           <Route path="/jobs/:id" element={<JobViewPage />} />

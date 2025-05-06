@@ -1,32 +1,65 @@
-export interface User { id: number; name: string; email: string; disability: string; created_at: string; }
-export interface Company {
-    created_at: string | number | Date;
-    description: string;
-    id: any;
+export interface Role {
+    id: number;
     name: string;
-}
-export interface Job {
-    requirements: string;
-    disability_filter: string;
-    created_at: string | number | Date;
-    description: ReactNode;
-    title: ReactNode;
-    id: ReactNode;
-    company_id: ReactNode;
-}
-export interface Course {
-    created_at: string | number | Date;
-    creator_name: string;
-    creator_id: any;
+  }
+  
+  export interface User {
+    id: number;
+    name: string;
+    email: string;
+    password?: string; 
+    disability?: string | null;
+    created_at: string;
+  }
+  
+  export interface UserRole {
+    user_id: number;
+    role_id: number;
+  }
+  
+  export interface DisabledUser {
+    id: number;
+    user_id: number;
+    disability_certificate_url: string;
+    verified: boolean;
+    created_at: string;
+  }
+  
+  export interface Company {
+    id: number;
+    name: string;
+    description?: string | null;
+    logo_url?: string | null;
+    created_at: string;
+  }
+  
+  export interface Job {
+    id: number;
+    company_id: number;
+    title: string;
+    description: string;
+    requirements?: string | null;
+    disability_filter?: string | null;
+    location?: string | null;
+    modality?: string | null;
+    salary_range?: string | null;
+    created_at: string;
+  }
+  
+  export interface Application {
+    id: number;
+    user_id: number;
+    job_id: number;
+    status: 'pending' | 'accepted' | 'rejected' | string; 
+    applied_at: string;
+  }
+  
+  export interface Course {
+    id: number;
+    title: string;
+    description?: string | null;
     type: string;
-    resource_url: string | undefined;
-    description: ReactNode;
-    title: ReactNode;
-    id: Key | null | undefined;
-}
-export interface Application {
-  id(id: any): void;
-  applied_at: string | number | Date;
-  status: ReactNode;
-  job_id: any;
-}
+    resource_url: string;
+    created_at: string;
+  }
+  
