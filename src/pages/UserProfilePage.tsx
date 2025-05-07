@@ -85,7 +85,6 @@ const UserProfilePage: React.FC = () => {
 
   return (
     <>
-      <Navbar />
       <div className="pt-24 max-w-md mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4">Mi Perfil</h2>
         <form onSubmit={handleSubmit} className="space-y-4 bg-white shadow rounded-lg p-6">

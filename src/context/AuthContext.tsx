@@ -1,5 +1,4 @@
-// src/context/AuthContext.tsx
-import React, { createContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useState, useEffect, ReactNode, useContext } from 'react';
 import api from '../api/axios';
 
 interface User {
@@ -7,6 +6,7 @@ interface User {
   name: string;
   email: string;
   disability: string;
+  role_id: number;
   created_at: string;
 }
 
@@ -14,17 +14,19 @@ interface AuthContextProps {
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
-  register: (name: string, email: string, password: string, disability: string) => Promise<void>;
+  register: (name: string, email: string, password: string, disability: string, role_id?: number) => Promise<void>;
   logout: () => void;
 }
 
-export const AuthContext = createContext<AuthContextProps>({
-  user: null,
-  loading: true,
-  login: async () => {},
-  register: async () => {},
-  logout: () => {},
-});
+const AuthContext = createContext<AuthContextProps | undefined>(undefined);
+
+export function useAuth() {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+}
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
@@ -53,8 +55,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(profile.data);
   }
 
-  async function register(name: string, email: string, password: string, disability: string) {
-    await api.post('/auth/register', { name, email, password, disability });
+  async function register(name: string, email: string, password: string, disability: string, role_id = 1) {
+    await api.post('/auth/register', { name, email, password, disability, role_id });
     await login(email, password);
   }
 
@@ -69,3 +71,5 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     </AuthContext.Provider>
   );
 }
+
+export { AuthContext };

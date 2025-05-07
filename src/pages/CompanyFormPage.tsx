@@ -1,13 +1,14 @@
-// src/pages/CompanyFormPage.tsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import api from '../api/axios';
 import { Company } from '../types/models';
+import { useAuth } from '../context/AuthContext'; // Para obtener el owner_id desde el contexto
 
 export default function CompanyFormPage() {
   const { id } = useParams<{ id?: string }>();
   const isEdit = Boolean(id);
   const navigate = useNavigate();
+  const { user } = useAuth(); // Obtener el owner_id desde el contexto
 
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -30,10 +31,16 @@ export default function CompanyFormPage() {
     e.preventDefault();
     setSubmitting(true);
     try {
+      if (!user) {
+        alert('No se ha podido obtener el propietario.');
+        return;
+      }
+
+      const companyData = { name, description, owner_id: user.id }; // Asegúrate de que el owner_id esté presente
       if (isEdit) {
-        await api.put<Company>(`/companies/${id}`, { name, description });
+        await api.put<Company>(`/companies/${id}`, companyData);
       } else {
-        await api.post<Company>('/companies', { name, description });
+        await api.post<Company>('/companies', companyData);
       }
       navigate('/app/companies');
     } catch (err) {

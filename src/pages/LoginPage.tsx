@@ -16,7 +16,7 @@ export default function LoginPage() {
     setError(null);
     try {
       await login(email, password);
-      navigate('/app');
+      navigate('/');
     } catch (err: any) {
       setError(err.response?.data?.message || 'Error de autenticación');
     }

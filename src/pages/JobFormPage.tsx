@@ -86,7 +86,6 @@ const JobFormPage: React.FC = () => {
 
   return (
     <>
-      <Navbar />
       <div className="pt-24 max-w-lg mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4">
           {isEdit ? 'Editar Vacante' : 'Nueva Vacante'}
