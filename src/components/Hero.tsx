@@ -11,9 +11,9 @@ const Hero = () => {
       {/* Left: Texto */}
       <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-[#2B1A56]">
-          Te ayudamos<br/>
+          ¡TalentoTe ayudamos<br/>
           a encontrar<br/>
-          tu mejor trabajo
+          el mejor trabajo!
         </h1>
 
         <p className="max-w-md mx-auto lg:mx-0 text-base sm:text-lg text-[#2B1A56]/80">

@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 lg:px-8 h-16">
         {/* Logo */}
         <Link to="/" className="text-xl font-semibold text-indigo-700">
-          DreamAgency
+          IncluJob
         </Link>
 
         {/* Mobile menu toggle */}

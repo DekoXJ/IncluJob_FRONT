@@ -71,14 +71,14 @@ const RegisterPage = () => {
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Registrar Usuario</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Rol</label>
+            <label className="block text-sm font-medium text-gray-700">Tipo de Usuario</label>
             <select
               value={roleId || ''}
               onChange={(e) => setRoleId(Number(e.target.value))}
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
               required
             >
-              <option value="" disabled>Seleccione un rol</option>
+              <option value="" disabled>Seleccione un tipo</option>
               {roles.map((role) => (
                 <option key={role.id} value={role.id}>{role.name}</option>
               ))}
