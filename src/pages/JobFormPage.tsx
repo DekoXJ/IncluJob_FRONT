@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import api from '../api/axios'
-import Navbar from '../components/Navbar'
 import { Company, Job } from '../types/models'
 
 const JobFormPage: React.FC = () => {

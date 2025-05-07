@@ -11,13 +11,13 @@ const Hero = () => {
       {/* Left: Texto */}
       <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-[#2B1A56]">
-          We Help<br/>
-          You Grow<br/>
-          Your Business
+          Te ayudamos<br/>
+          a encontrar<br/>
+          tu mejor trabajo
         </h1>
 
         <p className="max-w-md mx-auto lg:mx-0 text-base sm:text-lg text-[#2B1A56]/80">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          ¡Talento sin barreras, oportunidades para todos!
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
@@ -25,13 +25,13 @@ const Hero = () => {
             to="/login"
             className="px-6 py-3 bg-[#2B1A56] text-white rounded-lg hover:bg-[#231243] transition"
           >
-            Login
+            Iniciar Sesión
           </Link>
           <Link
             to="/register"
             className="px-6 py-3 border-2 border-[#2B1A56] text-[#2B1A56] rounded-lg hover:bg-[#2B1A56] hover:text-white transition"
           >
-            Register
+            Registrarse
           </Link>
         </div>
       </div>

@@ -1,15 +1,15 @@
 const RecentWork = () => {
     const works = [
-      { title: 'UI Soup', img: '/img/work1.png' },
-      { title: 'Goldcrown Labs', img: '/img/work2.png' },
-      { title: 'Close Concierge', img: '/img/work3.png' },
+      { title: 'Profesor de Química en Institución Educativa', img: '/img/work1.png' },
+      { title: 'Asesor de Estadística', img: '/img/work2.png' },
+      { title: 'Psicólogo', img: '/img/work3.png' },
     ]
 
     return (
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center mb-10">
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-800">Our Recent Work</h3>
-          <p className="text-gray-600 mt-2">By Our Experts</p>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-800">Nuevas oportunidades de trabajo</h3>
+          <p className="text-gray-600 mt-2">Expandiendo Fronteras</p>
         </div>
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {works.map(w => (
