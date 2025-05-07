@@ -4,27 +4,27 @@ import ServiceCard from './ServiceCard';
 
 const services = [
   {
-    title: 'Website Design',
+    title: 'Orientación Laboral Personalizada',
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "Ofrecemos asesoría individualizada para identificar habilidades, intereses y oportunidades laborales acordes a las capacidades y necesidades de cada usuario",
     color: '#FFE5DA',
   },
   {
-    title: 'Web Development',
+    title: 'Capacitación y Formación Online',
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "Participa en cursos virtuales gratuitos en habilidades técnicas y blandas, diseñados para mejorar tu empleabilidad y potenciar tu desarrollo profesional.",
     color: '#FFF1CC',
   },
   {
-    title: 'Mobile App Development',
+    title: 'Asistencia en la Elaboración de CV',
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "Recibe ayuda para crear o mejorar tu currículum vitae, destacando tus fortalezas, logros y capacidades con herramientas accesibles e intuitivas.",
     color: '#D3F9D8',
   },
   {
-    title: 'Marketing',
+    title: 'Conexión con Empresas Inclusivas',
     description:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "Facilitamos el contacto con organizaciones que practican políticas de diversidad, equidad e inclusión, generando oportunidades laborales reales y sostenibles.",
     color: '#FFD3E2',
   },
 ];
@@ -69,10 +69,10 @@ const WhatWeDo: React.FC = () => {
       {/* Heading */}
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2B1A56]">
-          What We Do
+          ¿Qué ofrecemos?
         </h2>
         <p className="mt-2 text-xl text-[#2B1A56]/80">
-          For Your Business
+          Para tu inserción laboral
         </p>
       </div>
 

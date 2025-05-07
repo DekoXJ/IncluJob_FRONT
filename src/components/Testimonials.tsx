@@ -1,15 +1,15 @@
 const Testimonials = () => {
     const quotes = [
-      { text: 'Dream Agency transformed our online presence!', author: 'UI Soup' },
-      { text: 'Their team is highly professional and creative.', author: 'Goldcrown Labs' },
-      { text: 'Excellent service and support throughout.', author: 'Close Concierge' },
+      { text: '¡¡Encontré trabajo en solo unas semanas después de registrarme!!', author: 'Carlos Paez' },
+      { text: 'Los videos guía son de mucha ayuda :).', author: 'Valeria Campos' },
+      { text: 'Pude entender rápido como manejar el sitio', author: 'Miguel Sanchez' },
     ]
 
     return (
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 text-center mb-10">
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-800">Our Testimonials</h3>
-          <p className="text-gray-600 mt-2">What Our Clients Are Saying</p>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-800">Nuestros Testimonios</h3>
+          <p className="text-gray-600 mt-2">¿Qué dicen nuestros usuarios?</p>
         </div>
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {quotes.map((q, i) => (

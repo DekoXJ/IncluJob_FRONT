@@ -11,23 +11,23 @@ import {
 const services: ServiceCardProps[] = [
   {
     icon: <ComputerDesktopIcon />,
-    title: 'Website Design',
-    description: 'Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.',
+    title: 'Orientación Laboral Personalizada',
+    description: 'Ofrecemos asesoría individualizada para identificar habilidades, intereses y oportunidades laborales acordes a las capacidades y necesidades de cada usuario ',
   },
   {
     icon: <CodeBracketIcon />,
-    title: 'Web Development',
-    description: 'Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.',
+    title: 'Capacitación y Formación Online',
+    description: 'Participa en cursos virtuales gratuitos en habilidades técnicas y blandas, diseñados para mejorar tu empleabilidad y potenciar tu desarrollo profesional.',
   },
   {
     icon: <DevicePhoneMobileIcon />,
-    title: 'Mobile App Development',
-    description: 'Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.',
+    title: 'Asistencia en la Elaboración de CV',
+    description: 'Recibe ayuda para crear o mejorar tu currículum vitae, destacando tus fortalezas, logros y capacidades con herramientas accesibles e intuitivas.',
   },
   {
     icon: <ChartBarIcon />,
-    title: 'Marketing',
-    description: 'Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.',
+    title: 'Conexión con Empresas Inclusivas',
+    description: 'Facilitamos el contacto con organizaciones que practican políticas de diversidad, equidad e inclusión, generando oportunidades laborales reales y sostenibles.',
   },
 ]
 
